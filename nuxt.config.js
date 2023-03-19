@@ -37,8 +37,18 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/bootstrap
+    "@nuxtjs/axios",
     'bootstrap-vue/nuxt',
   ],
+  axios: {
+    // extra config e.g
+    BaseURL: "http://localhost:5000/api",
+  },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: "http://localhost:5000/api",
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
